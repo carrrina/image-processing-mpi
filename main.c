@@ -1,5 +1,3 @@
-// Deaconu Andreea-Carina, 334CC
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
