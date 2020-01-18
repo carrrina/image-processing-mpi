@@ -1,5 +1,3 @@
-Deaconu Andreea-Carina, 334CC
-
 Descrierea mecanismului de scalare:
 
 Procesul cu rank 0 se ocupa de partea I/O a imaginii. Daca au fost specificate filtre ca parametri, tot el realizeaza urmatorii pasi:
@@ -9,24 +7,4 @@ Procesul cu rank 0 se ocupa de partea I/O a imaginii. Daca au fost specificate f
 - fiecare proces, inclusiv cel cu rank 0, aplica functia apply_filter pe portiunea sa de imagine, functie ce calculeaza pixelii noii imagini (inmultirile cu matricea kernel)
 - fiecare proces trimite cu Send, catre cel cu rank 0, rezultatul, iar procesul cu rank 0 le primeste cu Recv, asambland noua imagine, pe care o va scrie in fisierul de output
 
-Media timpilor de rulare:
 
-Imaginea: rorschach.pgm (7.4M)
-
-Numar procese:             2       3       4      
-filtru: smooth             1.11	  1.03	  0.94   
-filtru: blur               1.03   0.95	  0.82      
-filtru: sharpen            0.84   0.81	  0.80   
-filtru: mean               0.86   0.80    0.75   
-filtru: emboss             0.84   0.80    0.77  
-filtru: bssembssem         4.81   4.68    7.24
- 
-Imaginea: landscape.pnm (24M)
-
-Numar procese:             2       3       4      
-filtru: smooth             2.25    1.95    1.89  
-filtru: blur               2.00    1.97    1.93    
-filtru: sharpen            1.95    1.90    1.86 
-filtru: mean               2.30    2.18    1.94     
-filtru: emboss             2.02    1.94    1.81     
-filtru: bssembssem         14.84   13.98   12.56
