@@ -1,5 +1,5 @@
 build:
-	mpicc -Wall tema3.c -o tema3 
+	mpicc -Wall main.c -o main
 
 clean:
-	rm tema3
+	rm main
